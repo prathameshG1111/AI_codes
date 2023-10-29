@@ -1,0 +1,81 @@
+import time
+import random
+
+def delay_print(text, delay=0.5):
+    for char in text:
+        time.sleep(delay)
+        print(char, end='', flush=True)
+    print()
+
+name = input("Hello, what is your name? ")
+delay_print(f"Hello, {name}!")
+
+feeling = input("How's the day going? ").lower()
+if "good" in feeling:
+    delay_print("I'm feeling good too!")
+else:
+    delay_print("I'm sorry to hear that!")
+
+which_one = input("Done with your AI submission? ").lower()
+if "yes" in which_one:
+    delay_print("GREAT")
+else:
+    delay_print("Be quick!")
+
+activities = ["submission", "reading", "playing", "watching TV", "hiking"]
+mood = random.choice(activities)
+delay_print(f"What are you doing today? I feel like {mood} today.")
+
+certification = input("Have you done any certification? ").lower()
+if "yes" in certification:
+    delay_print("That's great!")
+
+food_types = ["Asian", "Japanese", "Italian", "Chinese", "Latin"]
+favorite_food = random.choice(food_types)
+delay_print(f"Which food type do you like most? I mostly like {favorite_food}.")
+
+sports = ["cricket", "Baseball", "Soccer", "Rugby", "Athletics"]
+favorite_sport = random.choice(sports)
+delay_print(f"Which sport do you love to watch the most? I love to watch {favorite_sport}.")
+
+peak = input("Do you know the height of the world's tallest mountain? ")
+if peak.lower() == "yes":
+    delay_print("Mount Everest is the tallest mountain in the world at 8,848 meters.")
+else:
+    delay_print("Now you know! It's 8,848 meters.")
+
+planet_count = input("How many planets are there in this solar system? ")
+if planet_count == "8":
+    delay_print("That's correct! There are 8 planets in our solar system.")
+else:
+    delay_print("Actually, there are 8 planets in our solar system.")
+
+horoscopes = ["Leo", "Cancer", "Capricorn", "Pisces", "Virgo"]
+my_horoscope = random.choice(horoscopes)
+delay_print(f"My horoscope is {my_horoscope}.")
+
+sit_ups = random.randint(15, 50)
+delay_print(f"How many sit-ups can you do? I can do around {sit_ups}.")
+
+tired = input("I'm feeling tired today. See you! Have a nice day.")
+
+Output:
+
+Hello, what is your name? abc
+Hello, abc!
+How's the day going? good
+I'm feeling good too!
+Done with your AI submission? Yes
+GREAT
+What are you doing today? I feel like watching TV today.
+Have you done any certification? Yes
+That's great!
+Which food type do you like most? I mostly like Japanese.
+Which sport do you lo
+ve to watch the most? I love to watch cricket.
+Do you know the height of the world's tallest mountain? Now you know! It's 8,848 meters.
+How many planets are there in this solar system? 8
+That's correct! There are 8 planets in our solar system.
+My horoscope is Pisces.
+How many sit-ups can you do? I can do around 22.
+I'm feeling tired today. See you! Have a nice day.

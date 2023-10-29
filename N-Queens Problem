@@ -44,6 +44,9 @@ In [2]:
  print("Invalid input. Please enter a valid integer.")
  if __name__ == "__main__":
  main()
+
+Output:
+
  Enter the number of queens (e.g., 4): 4
  Found 2 solution(s) for 4-queens problem:
  Solution 1:

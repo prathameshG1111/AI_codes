@@ -1,4 +1,4 @@
-In [2]: from random import choice
+ from random import choice
  from math import inf
  
 board = [[0, 0, 0],
@@ -180,7 +180,20 @@ def pvc():
         currentPlayer = -1
     else:
         currentPlayer = 1
+    while not (boardFull(board) or gameWon(board)):
+        makeMove(board, currentPlayer, 1)
+        currentPlayer *= -1
  
+    printResult(board)
+ 
+# Driver Code
+ print("=================================================")
+ print("TIC-TAC-TOE using MINIMAX with ALPHA-BETA Pruning")
+ print("=================================================")
+ pvc()
+
+Output:
+
 =================================================
  TIC-TAC-TOE using MINIMAX with ALPHA-BETA Pruning
  =================================================
@@ -207,17 +220,4 @@ def pvc():
 | X || X ||   |--------------
 |   ||   ||   |--------------
 ===============
- O's have won! 
-    while not (boardFull(board) or gameWon(board)):
-        makeMove(board, currentPlayer, 1)
-        currentPlayer *= -1
- 
-    printResult(board)
- 
-# Driver Code
- print("=================================================")
- print("TIC-TAC-TOE using MINIMAX with ALPHA-BETA Pruning")
- print("=================================================")
- pvc()
- 
- 
+ O's have won!

@@ -103,6 +103,8 @@ In [1]: def aStarAlgo(start_node, stop_node):
         }
  
         return H_dist[n]
+
+Output:
  
 #Describe your graph here  
 Graph_nodes = {
@@ -117,3 +119,5 @@ Graph_nodes = {
     'I': [('E', 5), ('G', 3), ('H', 2), ('J', 3)],
  }
  aStarAlgo('A', 'J')
+
+ Path found: ['A', 'F', 'G', 'I', 'J']
